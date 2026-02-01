@@ -29,6 +29,18 @@ noBtn.addEventListener('mouseover', () => {
 });
 
 yesBtn.addEventListener('click', () => {
+    // 1. Hide proposal and show celebration
     document.getElementById('proposal-section').classList.add('hidden');
     document.getElementById('celebration').classList.remove('hidden');
+
+    // 2. Target the video
+    const vid = document.getElementById('celebration-video');
+    
+    // 3. Set speed to 1.25x
+    vid.playbackRate = 1.25;
+
+    // 4. Play the video automatically
+    vid.play().catch(error => {
+        console.log("Autoplay was prevented, usually requires a mute attribute:", error);
+    });
 });
