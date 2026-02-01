@@ -37,7 +37,7 @@ yesBtn.addEventListener('click', () => {
     const vid = document.getElementById('celebration-video');
     
     // 3. Set speed to 1.25x
-    vid.playbackRate = 1.25;
+    vid.playbackRate = 1.5;
 
     // 4. Play the video automatically
     vid.play().catch(error => {
